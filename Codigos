@@ -1,0 +1,208 @@
+# Codigo de Pagina Loging + css
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Login HDA</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="CSS/ejercicio16.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="navbar-hda">
+      <div class="hda-logo">
+        <img src="Imagenes/HDA.jpg" alt="Logo pequeño">
+        <span class="title">HDA</span>
+      </div>
+    </div>
+  
+    <div class="main-content">
+      <img src="Imagenes/HDA.jpg" alt="Logo central">
+      <h2>Bienvenida a HDA</h2>
+      <p><em>“Ayudándote a florecer cada día”</em></p> <!-- 🎯 Slogan aquí -->
+  
+      <form class="form-login" onsubmit="login(event)">
+        <div class="mb-3">
+          <input type="email" class="form-control" placeholder="Correo electrónico" required>
+        </div>
+        <div class="mb-3">
+          <input type="password" class="form-control" placeholder="Contraseña" required>
+        </div>
+        <button type="submit" class="btn btn-login">Entrar</button>
+      </form>
+    </div>
+  
+    <script>
+      function login(event) {
+        event.preventDefault();
+        window.location.href = "Inicio.html";
+      }
+    </script>
+  
+  </body>
+  
+</html>
+
+
+CSS
+
+body {
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.navbar-hda {
+  background-color: #e9a8c3; /* Rosa palo */
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-hda .hda-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.navbar-hda img {
+  height: 40px;
+}
+
+.navbar-hda .title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.main-content {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.main-content img {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.form-login {
+  max-width: 300px;
+  margin: 0 auto;
+  background-color: #fce4ec;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+}
+
+.btn-login {
+  background-color: #e9a8c3;
+  border: none;
+  color: white;
+  width: 100%;
+}
+
+.btn-login:hover {
+  background-color: #d48aad;
+}
+
+CODIGO PANTALLA INICIO + CSS
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel Principal HDA</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="CSS/Inicio.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="Imagenes/HDA.jpg" alt="Logo" style="height: 40px; margin-right: 10px;">
+            HDA
+          </a>
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link" href="#">Actividades Diarias</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Alimentos Recomendados</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Diario Personal</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+
+  <div class="container-sections">
+    <div class="card-section">
+      <h3>🧘 Actividades Diarias</h3>
+      <p>Ejercicios, rutinas y consejos para sentirte mejor.</p>
+    </div>
+    <div class="card-section">
+      <h3>🍎 Alimentos Recomendados</h3>
+      <p>Ideas saludables y planes de alimentación.</p>
+    </div>
+    <div class="card-section">
+      <h3>📓 Diario Personal</h3>
+      <p>Exprésate día a día y registra tu estado emocional.</p>
+    </div>
+  </div>
+
+</body>
+</html>
+
+
+CSS
+
+body {
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.navbar {
+  background-color: #e9a8c3;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: white !important;
+}
+
+.nav-link {
+  color: white !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #4a235a !important;
+}
+
+.container-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px;
+}
+
+.card-section {
+  background-color: #fce4ec;
+  border: none;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+}
